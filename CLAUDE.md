@@ -20,7 +20,7 @@ Karaokay is a static karaoke song lyrics catalog built with Eleventy (11ty) 3.x.
 - **Songs:** Add a `.md` file to `src/songs/` with `title`, `artist` (string or array), and `album` frontmatter. Layout and permalink are set by `src/songs/songs.json`. Multiple artists are displayed joined with commas and `&`
 - **Artist pages:** `src/artist-pages.njk` uses Eleventy pagination over `collections.artists` to generate `/artists/{slug}/`
 - **Album pages:** `src/album-pages.njk` uses Eleventy pagination over `collections.albums` to generate `/albums/{slug}/`
-- **Path prefix:** Production uses `/karaokay/` prefix (for GitHub Pages). All template hrefs must use the `| url` filter. Dev overrides to `/` via env var. CI runs `npm test` to catch broken/unprefixed links
+- **Path prefix:** Production uses `/karaokay/` prefix (for GitHub Pages). All template hrefs must use the `| url` filter. CI runs `npm test` to catch broken/unprefixed links
 - **Styling:** Single file `src/css/styles.css`, inlined at build time. Purple accent (#7c3aed), responsive at 768px, print-optimized for A4
 - **Interactivity:** Vanilla JS client-side search filtering only, no frameworks or bundlers
 - **Dependencies:** Only `@11ty/eleventy` (dev dependency). ES modules (`"type": "module"`)
