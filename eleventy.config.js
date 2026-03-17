@@ -72,6 +72,7 @@ export default function (eleventyConfig) {
   });
 
   return {
+    pathPrefix: process.env.ELEVENTY_PATH_PREFIX || "/karaokay/",
     dir: {
       input: "src",
       output: "_site",

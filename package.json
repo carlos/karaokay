@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "eleventy --serve",
-    "build": "eleventy"
+    "dev": "ELEVENTY_PATH_PREFIX=/ eleventy --serve",
+    "build": "eleventy",
+    "test": "node tests/links.test.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2"

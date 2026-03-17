@@ -13,7 +13,7 @@ pageTitle: Artists
 <ul class="artist-list">
   {% for artist in collections.artists %}
   <li class="artist-item" data-searchable>
-    <a href="/artists/{{ artist.slug }}/">
+    <a href="{{ ('/artists/' + artist.slug + '/') | url }}">
       <span class="artist-name">{{ artist.name }}</span>
       <span class="artist-count">{{ artist.songs | length }} song{{ "s" if artist.songs | length != 1 }}</span>
     </a>

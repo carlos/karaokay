@@ -13,7 +13,7 @@ pageTitle: All Songs
 <ul class="song-list">
   {% for song in collections.songs %}
   <li class="song-item" data-searchable>
-    <a href="{{ song.url }}">
+    <a href="{{ song.url | url }}">
       <span class="song-item-info">
         <span class="song-item-title">{{ song.data.title }}</span>
         <span class="song-item-artist">{{ song.data.artist | formatArtists }}</span>

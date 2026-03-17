@@ -16,7 +16,7 @@ eleventyComputed:
 <ul class="song-list">
   {% for song in album.songs %}
   <li class="song-item">
-    <a href="{{ song.url }}">
+    <a href="{{ song.url | url }}">
       <span class="song-item-info">
         <span class="song-item-title">{{ song.data.title }}</span>
         <span class="song-item-artist">{{ song.data.artist | formatArtists }}</span>
