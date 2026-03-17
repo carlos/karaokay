@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/song.njk",
+  "permalink": "/songs/{{ title | slugify }}/"
+}

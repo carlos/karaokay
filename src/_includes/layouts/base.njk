@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ pageTitle }} — {{ site.title }}</title>
+  {% inlineCSS %}
+</head>
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="/" class="sidebar-title">Karaokay</a>
+        <div class="sidebar-subtitle">Song Lyrics</div>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>All Songs</a></li>
+        <li><a href="/artists/"{% if page.url == "/artists/" %} class="active"{% endif %}>By Artist</a></li>
+        <li><a href="/albums/"{% if page.url == "/albums/" %} class="active"{% endif %}>By Album</a></li>
+      </ul>
+    </nav>
+    <main class="main">
+      {{ content | safe }}
+    </main>
+  </div>
+<script>
+(function() {
+  var input = document.querySelector('.search-input');
+  if (!input) return;
+  var items = document.querySelectorAll('[data-searchable]');
+  input.addEventListener('input', function() {
+    var q = input.value.toLowerCase();
+    items.forEach(function(item) {
+      item.style.display = item.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+})();
+</script>
+</body>
+</html>

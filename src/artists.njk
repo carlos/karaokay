@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+pageTitle: Artists
+---
+<div class="page-header">
+  <h1>Artists</h1>
+</div>
+
+<div class="search-box">
+  <input type="text" class="search-input" placeholder="Search artists…">
+</div>
+
+<ul class="artist-list">
+  {% for artist in collections.artists %}
+  <li class="artist-item" data-searchable>
+    <a href="/artists/{{ artist.slug }}/">
+      <span class="artist-name">{{ artist.name }}</span>
+      <span class="artist-count">{{ artist.songs | length }} song{{ "s" if artist.songs | length != 1 }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

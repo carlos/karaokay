@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+pageTitle: All Songs
+---
+<div class="page-header">
+  <h1>All Songs</h1>
+</div>
+
+<div class="search-box">
+  <input type="text" class="search-input" placeholder="Search songs or artists…">
+</div>
+
+<ul class="song-list">
+  {% for song in collections.songs %}
+  <li class="song-item" data-searchable>
+    <a href="{{ song.url }}">
+      <span class="song-item-info">
+        <span class="song-item-title">{{ song.data.title }}</span>
+        <span class="song-item-artist">{{ song.data.artist | formatArtists }}</span>
+      </span>
+      {% if song.data.album %}<span class="song-item-album">{{ song.data.album }}</span>{% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

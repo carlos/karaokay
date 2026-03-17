@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+pageTitle: Albums
+---
+<div class="page-header">
+  <h1>Albums</h1>
+</div>
+
+<div class="search-box">
+  <input type="text" class="search-input" placeholder="Search albums…">
+</div>
+
+<ul class="album-list">
+  {% for album in collections.albums %}
+  <li class="album-item" data-searchable>
+    <a href="/albums/{{ album.slug }}/">
+      <span class="album-name">{{ album.name }}</span>
+      <span class="album-count">{{ album.songs | length }} song{{ "s" if album.songs | length != 1 }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

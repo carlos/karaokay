@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.artists
+  size: 1
+  alias: artist
+permalink: /artists/{{ artist.slug }}/
+eleventyComputed:
+  pageTitle: "{{ artist.name }}"
+---
+<div class="page-header">
+  <h1>{{ artist.name }}</h1>
+  <p class="description">{{ artist.songs | length }} song{{ "s" if artist.songs | length != 1 }}</p>
+</div>
+
+<ul class="song-list">
+  {% for song in artist.songs %}
+  <li class="song-item">
+    <a href="{{ song.url }}">
+      <span class="song-item-title">{{ song.data.title }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

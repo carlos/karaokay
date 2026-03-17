@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.letras.com)",
+      "WebFetch(domain:juliet-musical.fandom.com)",
+      "WebFetch(domain:lyricstranslate.com)",
+      "Bash(npm run:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(kill 90615)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
