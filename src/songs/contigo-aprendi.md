@@ -2,6 +2,7 @@
 title: Contigo Aprendí
 artist: Luis Miguel
 album: Romances
+track: 1
 ---
 
 Contigo aprendí

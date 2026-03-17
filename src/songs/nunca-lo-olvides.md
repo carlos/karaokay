@@ -2,6 +2,7 @@
 title: Nunca Me Olvides
 artist: Airbag
 album: Nunca Me Olvides
+track: 1
 ---
 
 Y van quedando los vasos vacíos

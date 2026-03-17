@@ -8,6 +8,7 @@ artist:
   - Philippe Arroyo
   - Original Broadway Cast of & Juliet
 album: '& Juliet (Original Broadway Cast Recording)'
+track: 14
 ---
 
 [Romeo and (Ensemble)]

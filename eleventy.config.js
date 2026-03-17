@@ -38,7 +38,7 @@ export default function (eleventyConfig) {
       .map(([album, songs]) => ({
         name: album,
         slug: eleventyConfig.getFilter("slugify")(album),
-        songs: songs.sort((a, b) => a.data.title.localeCompare(b.data.title)),
+        songs: songs.sort((a, b) => (a.data.track || Infinity) - (b.data.track || Infinity)),
       }));
     return sorted;
   });

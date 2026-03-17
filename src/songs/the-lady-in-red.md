@@ -2,6 +2,7 @@
 title: The Lady in Red
 artist: Boyce Avenue
 album: The Lady in Red
+track: 1
 ---
 
 I've never seen you looking so lovely as you did tonight

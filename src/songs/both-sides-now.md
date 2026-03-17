@@ -2,6 +2,7 @@
 title: Both Sides Now
 artist: Emilia Jones
 album: CODA (Soundtrack from the Apple Original Film)
+track: 15
 ---
 
 Rows and flows of angel hair
