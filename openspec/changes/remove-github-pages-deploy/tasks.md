@@ -32,6 +32,6 @@
 
 ## 5. Close out
 
-- [ ] 5.1 Commit directly to `master` — no pull request, matching the contribution requirement in the
+- [x] 5.1 Commit directly to `master` — no pull request, matching the contribution requirement in the
       spec
-- [ ] 5.2 Confirm no workflow runs were triggered by the push
+- [x] 5.2 Confirm no workflow runs were triggered by the push
