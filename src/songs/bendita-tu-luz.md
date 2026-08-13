@@ -1,8 +1,10 @@
 ---
 title: Bendita Tu Luz
-artist: Maná
-album: Falta Amor
-track: 3
+artist:
+  - Maná
+  - Juan Luis Guerra
+album: Amar es Combatir
+track: 7
 ---
 
 Bendito el lugar, y el motivo de estar ahí

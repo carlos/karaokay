@@ -1,7 +1,7 @@
 ---
 title: Free
-artist: KPop Deamon Hunters
-album: KPop Deamon Hunters
+artist: KPop Demon Hunters
+album: KPop Demon Hunters
 track: 8
 ---
 
