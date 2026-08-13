@@ -1,0 +1,20 @@
+{{- /*
+  Generates one page per distinct `album` value across the songs, so importing
+  a song with a new album needs no extra file.
+
+  Content adapters run before the site is initialized, so site.RegularPages is
+  unavailable here — the song front matter has to be read straight off disk.
+*/ -}}
+{{- $albums := dict -}}
+{{- range os.ReadDir "content/songs" -}}
+  {{- if strings.HasSuffix .Name ".md" -}}
+    {{- $raw := os.ReadFile (printf "content/songs/%s" .Name) -}}
+    {{- $front := index (split $raw "---") 1 | transform.Unmarshal -}}
+    {{- with $front.album -}}
+      {{- $albums = merge $albums (dict (urlize .) .) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- range $slug, $name := $albums -}}
+  {{- $.AddPage (dict "path" $slug "title" $name "kind" "page") -}}
+{{- end -}}

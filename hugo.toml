@@ -1,0 +1,26 @@
+baseURL = "https://carlos.github.io/karaokay/"
+locale = "en"
+title = "Karaokay"
+
+# Taxonomy terms come from artist names, several of which are accented
+# (Maná, Andrés Calamaro). Without this they become percent-encoded URLs.
+removePathAccents = true
+
+# Match the pre-migration output surface — no feeds or sitemap today.
+disableKinds = ["rss", "sitemap"]
+
+# Only artists. Album is a plain param (a song has exactly one album, and
+# album pages need track ordering, which taxonomy sorting fights).
+[taxonomies]
+  artist = "artists"
+
+[markup.goldmark.renderer]
+  # Lyrics rely on `white-space: pre-wrap`, so single newlines must survive
+  # into the HTML as literal newlines rather than <br> tags.
+  hardWraps = false
+
+[markup.goldmark.extensions.typographer]
+  # On by default, and it rewrites apostrophes in lyrics ("you're" becomes
+  # "you’re"). Keep the words exactly as written — anything searching the
+  # lyrics later has to match what a person actually types.
+  disable = true

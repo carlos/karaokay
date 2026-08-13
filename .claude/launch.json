@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "karaokay",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["@11ty/eleventy", "--serve", "--port", "8081"],
+      "runtimeExecutable": "mise",
+      "runtimeArgs": ["run", "dev"],
       "port": 8081
     }
   ]

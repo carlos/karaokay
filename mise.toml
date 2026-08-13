@@ -1,0 +1,20 @@
+# Toolchain for Karaokay. CI reads this same file via jdx/mise-action,
+# so local and CI versions cannot drift.
+
+[tools]
+# Exact: Hugo breaks template APIs across minor releases.
+hugo = "0.164.0"
+# Minor: Go's compatibility promise makes exact pinning noise.
+go = "1.26"
+
+[tasks.dev]
+description = "Serve the site with hot reload on :8081"
+run = "hugo server --port 8081"
+
+[tasks.build]
+description = "Build the site to public/"
+run = "hugo"
+
+[tasks.test]
+description = "Post-build validation (requires a fresh build)"
+run = "go test ./..."

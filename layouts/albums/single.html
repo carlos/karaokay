@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ $songs := where site.RegularPages "Params.album" .Title }}
+{{ $tracked := where $songs "Params.track" "!=" nil }}
+{{ $untracked := where $songs "Params.track" nil }}
+<div class="page-header">
+  <h1>{{ .Title }}</h1>
+  <p class="description">{{ len $songs }} song{{ if ne (len $songs) 1 }}s{{ end }}</p>
+</div>
+
+<ul class="song-list">
+  {{/* Track order, with untracked songs last — matching the pre-migration sort. */}}
+  {{ range $song := ($tracked.ByParam "track" | append $untracked.ByTitle) }}
+  <li class="song-item">
+    <a href="{{ $song.RelPermalink }}">
+      <span class="song-item-info">
+        <span class="song-item-title">{{ $song.Title }}</span>
+        <span class="song-item-artist">{{ partial "artist-names.html" $song }}</span>
+      </span>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

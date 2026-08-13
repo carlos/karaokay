@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="page-header">
+  <h1>All Songs</h1>
+</div>
+
+<div class="search-box">
+  <input type="text" class="search-input" placeholder="Search songs or artists…">
+</div>
+
+<ul class="song-list">
+  {{ range (where site.RegularPages "Section" "songs").ByTitle }}
+  <li class="song-item" data-searchable>
+    <a href="{{ .RelPermalink }}">
+      <span class="song-item-info">
+        <span class="song-item-title">{{ .Title }}</span>
+        <span class="song-item-artist">{{ partial "artist-names.html" . }}</span>
+      </span>
+      {{ with .Params.album }}<span class="song-item-album">{{ . }}</span>{{ end }}
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

@@ -20,18 +20,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
+      # Installs the exact Hugo and Go versions pinned in mise.toml, so CI and
+      # local builds cannot drift.
+      - uses: jdx/mise-action@v2
 
-      - run: npm ci
-      - run: npm run build
-      - run: npm test
+      - run: mise run build
+      - run: mise run test
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: public
 
   deploy:
     needs: build

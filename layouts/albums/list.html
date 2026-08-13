@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="page-header">
+  <h1>Albums</h1>
+</div>
+
+<div class="search-box">
+  <input type="text" class="search-input" placeholder="Search albums…">
+</div>
+
+<ul class="album-list">
+  {{ range .Pages.ByTitle }}
+  {{ $songs := where site.RegularPages "Params.album" .Title }}
+  <li class="album-item" data-searchable>
+    <a href="{{ .RelPermalink }}">
+      <span class="album-name">{{ .Title }}</span>
+      <span class="album-count">{{ len $songs }} song{{ if ne (len $songs) 1 }}s{{ end }}</span>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
