@@ -35,14 +35,6 @@ Looking at the crowd and I see your body sway, c'mon
 Wishin' I could thank you in a different way, c'mon
 All of your time spent keeps us alive
 
-You might also like
-Sydney
-Kate Miller-Heidke & Keir Nuttall
-Problem / Can’t Feel My Face
-Miriam Teak Lee
-Lead Us Out of the Night
-Original Broadway Cast of Come From Away
-
 [WILLIAM SHAKESPEARE & ENSEMBLE]
 All you people can't you see, can't you see?
 How your love's affecting our reality
