@@ -15,7 +15,7 @@ Tool versions are pinned in `mise.toml`; CI installs the same versions via `jdx/
 - `mise run dev` — `hugo server` with hot reload on port 8081
 - `mise run build` — production build to `public/`
 - `mise run test` — post-build validation (`go test ./...`); requires a fresh build first, since it
-  reads `public/`
+  reads `public/`. Nothing runs this automatically — see "Local only" below.
 
 There is no linter and no test framework beyond Go's own — `tests/links_test.go` is a stdlib-only Go
 test with three checks: every internal href resolves to a real file, every internal href carries the
@@ -58,10 +58,13 @@ linger and can mask a real failure — `rm -rf public` when a build's output loo
   apostrophes stay as written (`you're`, not `you’re`) — anything searching the lyrics has to match
   what a person actually types. Avoid lyric lines that start with `-`, `*`, `#`, `>`, or `N.`, and
   avoid `*`/`_` in lyrics: Markdown will render them as lists or emphasis.
-- **Path prefix:** the site is served under `/karaokay/` (GitHub Pages), set via `baseURL`.
-  **Never hand-build an internal href.** `relURL` and `absURL` silently drop the baseURL subpath —
-  only page methods carry it. Use `.RelPermalink`, `site.Home.RelPermalink`, or resolve the page first
-  with `site.GetPage`. `mise run test` fails the CI build on any unprefixed or broken link.
+- **Internal links:** the site is served from the root (`baseURL = "/"`), so pages are addressed as
+  `/songs/roar/`. **Never hand-build an internal href.** `relURL` and `absURL` do not behave the way
+  their names suggest — they silently drop any baseURL subpath, which once shipped a site whose every
+  link was broken. Use `.RelPermalink`, `site.Home.RelPermalink`, or resolve the page first with
+  `site.GetPage`. `mise run test` fails on any href that is relative, malformed, or points nowhere.
+  Root-relative addressing means the built `public/` needs to be *served* — opening `index.html` from
+  the filesystem will not work. Set `relativeURLs = true` if you ever want portable output.
 - **Search** is a single inline script in `baseof.html`: it binds to `.search-input` and shows/hides
   elements marked `[data-searchable]` by text match. A new listing page gets filtering for free by
   using those two hooks — no per-page JS.
@@ -69,7 +72,15 @@ linger and can mask a real failure — `rm -rf public` when a build's output loo
 - **Styling:** one file, `assets/css/styles.css`, inlined into every page via `resources.Get`. Purple
   accent (`#7c3aed`), responsive breakpoint at 768px, print styles tuned for A4 song sheets.
 
-## Deploy
+## Local only — do not add a deployment
 
-`.github/workflows/deploy.yml` builds on push to `master`, runs `mise run test`, and publishes
-`public/` to GitHub Pages.
+This site is **deliberately unpublished**. It is built and previewed on one machine and is not hosted
+anywhere. GitHub Pages was disabled and the deployment workflow deleted on purpose — their absence is
+a decision, not an omission, so do not restore a workflow or re-enable Pages assuming something went
+missing.
+
+The git remote is kept for off-machine backup only; pushing does not publish anything.
+
+Because there is no CI, **nothing runs the tests automatically**. Run `mise run build && mise run
+test` yourself after editing content or templates — that is now the only thing standing between a
+broken link and not noticing.

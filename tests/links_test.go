@@ -17,7 +17,7 @@ import (
 const (
 	defaultSiteDir   = "public"
 	defaultSongsDir  = "content/songs"
-	defaultPrefix    = "/karaokay/"
+	defaultPrefix    = "/"
 	prefixEnvVar     = "KARAOKAY_PATH_PREFIX"
 	siteDirEnvVar    = "KARAOKAY_SITE_DIR"
 	rootMarkerFile   = "mise.toml"

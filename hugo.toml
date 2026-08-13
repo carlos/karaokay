@@ -1,4 +1,6 @@
-baseURL = "https://carlos.github.io/karaokay/"
+# Local-only: the site is built and previewed on this machine, never published,
+# so pages are addressed from the root rather than a project subpath.
+baseURL = "/"
 locale = "en"
 title = "Karaokay"
 
