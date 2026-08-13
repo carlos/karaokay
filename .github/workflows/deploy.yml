@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -10,8 +11,9 @@ permissions:
   pages: write
   id-token: write
 
+# Keyed by ref so a pull request run cannot cancel a master deploy.
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -31,8 +33,10 @@ jobs:
         with:
           path: public
 
+  # Pull requests build and test only — publishing stays master-only.
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
