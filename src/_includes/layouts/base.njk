@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ pageTitle }} — {{ site.title }}</title>
+  <title>{% if pageTitle %}{{ site.title }} — {{ pageTitle }}{% else %}{{ site.title }}{% endif %}</title>
   {% inlineCSS %}
 </head>
 <body>

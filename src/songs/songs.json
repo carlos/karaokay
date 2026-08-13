@@ -1,4 +1,7 @@
 {
   "layout": "layouts/song.njk",
-  "permalink": "/songs/{{ title | slugify }}/"
+  "permalink": "/songs/{{ title | slugify }}/",
+  "eleventyComputed": {
+    "pageTitle": "{{ title }}"
+  }
 }
