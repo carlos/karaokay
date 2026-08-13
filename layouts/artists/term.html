@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="page-header">
+  <h1>{{ .Title }}</h1>
+  <p class="description">{{ len .Pages }} song{{ if ne (len .Pages) 1 }}s{{ end }}</p>
+</div>
+
+<ul class="song-list">
+  {{ range .Pages.ByTitle }}
+  <li class="song-item">
+    <a href="{{ .RelPermalink }}">
+      <span class="song-item-title">{{ .Title }}</span>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

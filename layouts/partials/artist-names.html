@@ -1,0 +1,6 @@
+{{- /* Credited artists as "A, B & C", in front-matter order. */ -}}
+{{- $names := slice -}}
+{{- range .GetTerms "artists" -}}
+  {{- $names = $names | append .LinkTitle -}}
+{{- end -}}
+{{- delimit $names ", " " & " -}}

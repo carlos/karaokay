@@ -5,9 +5,13 @@
       "WebFetch(domain:www.letras.com)",
       "WebFetch(domain:juliet-musical.fandom.com)",
       "WebFetch(domain:lyricstranslate.com)",
-      "Bash(npm run:*)",
+      "Bash(mise run:*)",
+      "Bash(mise exec:*)",
+      "Bash(mise install:*)",
+      "Bash(hugo:*)",
+      "Bash(go test:*)",
+      "Bash(go build:*)",
       "mcp__Claude_Preview__preview_start",
-      "Bash(kill 90615)",
       "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
@@ -16,8 +20,6 @@
       "Bash(git push:*)",
       "Bash(gh run:*)",
       "WebFetch(domain:carlos.github.io)",
-      "Bash(npm test:*)",
-      "Bash(xargs -I{} sh -c 'echo \"--{}--\"; head -12 {}')",
       "Bash(git checkout *)"
     ]
   }

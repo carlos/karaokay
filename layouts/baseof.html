@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if and .Title (ne .Title site.Title) }}{{ site.Title }} — {{ .Title }}{{ else }}{{ site.Title }}{{ end }}</title>
+  {{ with resources.Get "css/styles.css" }}<style>{{ .Content | safeCSS }}</style>{{ end }}
+</head>
+<body>
+  {{/* Resolve real pages rather than building hrefs by hand: relURL/absURL
+       drop the baseURL subpath, so only page methods carry the /karaokay/
+       prefix that GitHub Pages serves the site under. */}}
+  {{ $artists := site.GetPage "/artists" }}
+  {{ $albums := site.GetPage "/albums" }}
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="{{ site.Home.RelPermalink }}" class="sidebar-title">Karaokay</a>
+        <div class="sidebar-subtitle">Song Lyrics</div>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="{{ site.Home.RelPermalink }}"{{ if .IsHome }} class="active"{{ end }}>All Songs</a></li>
+        <li><a href="{{ $artists.RelPermalink }}"{{ if eq .RelPermalink $artists.RelPermalink }} class="active"{{ end }}>By Artist</a></li>
+        <li><a href="{{ $albums.RelPermalink }}"{{ if eq .RelPermalink $albums.RelPermalink }} class="active"{{ end }}>By Album</a></li>
+      </ul>
+    </nav>
+    <main class="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </div>
+<script>
+(function() {
+  var input = document.querySelector('.search-input');
+  if (!input) return;
+  var items = document.querySelectorAll('[data-searchable]');
+  input.addEventListener('input', function() {
+    var q = input.value.toLowerCase();
+    items.forEach(function(item) {
+      item.style.display = item.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+})();
+</script>
+</body>
+</html>

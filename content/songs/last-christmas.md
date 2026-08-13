@@ -1,0 +1,65 @@
+---
+title: Last Christmas
+artists: 
+  - Wham!
+album: Last Christmas
+track: 1
+---
+
+Last Christmas, I gave you my heart
+But the very next day, you gave it away
+This year, to save me from tears
+I'll give it to someone special
+Last Christmas, I gave you my heart
+But the very next day, you gave it away (You gave it away)
+This year, to save me from tears
+I'll give it to someone special (Special)
+
+Once bitten and twice shy
+I keep my distance, but you still catch my eye
+Tell me, baby, do you recognise me?
+Well, it's been a year, it doesn't surprise me
+(Happy Christmas) I wrapped it up and sent it
+With a note saying, "I love you", I meant it
+Now I know what a fool I've been
+But if you kissed me now, I know you'd fool me again
+
+Last Christmas, I gave you my heart
+But the very next day, you gave it away (You gave it away)
+This year, to save me from tears
+I'll give it to someone special (Special)
+Last Christmas, I gave you my heart
+But the very next day, you gave it away
+This year, to save me from tears
+I'll give it to someone special (Special)
+
+Oh
+Oh, my baby
+Ooh
+
+A crowded room, friends with tired eyes
+I'm hiding from you and your soul of ice
+My God, I thought you were someone to rely on
+Me? I guess I was a shoulder to cry on
+A face on a lover with a fire in his heart
+A man undercover, but you tore him apart (Tore me apart)
+Ooh-ooh
+Now I've found a real love, you'll never fool me again
+
+Last Christmas, I gave you my heart
+But the very next day, you gave it away (You gave it away)
+This year, to save me from tears
+I'll give it to someone special (Special)
+Last Christmas, I gave you my heart
+But the very next day, you gave it away (You gave me away)
+This year, to save me from tears (Oh)
+I'll give it to someone special (Special)
+
+Face on a lover with a fire in his heart (I gave you my heart)
+A man undercover, but you tore him apart
+Maybe next year
+I'll give it to someone, I'll give it to someone special
+
+Special
+Someone
+Someone

@@ -1,0 +1,54 @@
+---
+title: Against All Odds (Take A Look At Me Now)
+artists: Phil Collins
+album: The Singles
+track: 10
+---
+
+How can I just let you walk away?
+Just let you leave without a trace
+When I stand here taking every breath
+With you? Ooh, ooh
+
+You're the only one who really knew me at all
+
+How can you just walk away from me
+When all I can do is watch you leave?
+'Cause we've shared the laughter and the pain
+And even shared the tears
+
+You're the only one who really knew me at all
+
+So, take a look at me now
+Well, there's just an empty space
+And there's nothin' left here to remind me
+Just the memory of your face
+
+Ooh, take a look at me now
+Well, there's just an empty space
+And you comin' back to me is against the odds
+And that's what I've got to face
+
+I wish I could just make you turn around
+Turn around and see me cry
+There's so much I need to say to you
+So many reasons why
+
+You're the only one who really knew me at all
+
+So, take a look at me now
+Well, there's just an empty space
+And there's nothin' left here to remind me
+Just the memory of your face
+
+Now, take a look at me now
+'Cause there's just an empty space
+But to wait for you is all I can do
+And that's what I've got to face
+
+Take a good look at me now
+'Cause I'll still be standin' here
+And you comin' back to me is against all odds
+It's the chance I've gotta take
+
+Take a look at me now
