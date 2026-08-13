@@ -332,6 +332,7 @@ a:hover { color: var(--color-accent-hover); text-decoration: underline; }
   font-size: 1.05rem;
   line-height: 1.8;
   white-space: pre-wrap;
+  text-transform: uppercase;
 }
 
 .lyrics p {
