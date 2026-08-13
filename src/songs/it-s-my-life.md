@@ -38,14 +38,6 @@ For Romeo and Juliet who never backed down
 (Romeo, Romeo, Romeo!)
 Tomorrow's getting harder make no mistake
 
-You might also like
-All to Myself
-Future, Metro Boomin & The Weeknd
-Show of Hands
-Future, Metro Boomin & A$AP Rocky
-Problem/Can’t Feel My Face
-Lorna Courtney, Ben Jackson Walker & Original Broadway Cast of & Juliet
-
 [William and Romeo]
 Luck ain't even lucky, got to make your own breaks
 
